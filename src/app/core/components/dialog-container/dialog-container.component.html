@@ -1,0 +1,16 @@
+<div class="w-full h-full  py-7 rounded-xl grid grid-rows-[auto_1fr] gap-6 shadow-lg bg-primary-50">
+  <header class="flex justify-between items-center px-6">
+    <h5 class="text-alpha-900">
+      {{ data().title }}
+    </h5>
+    <button class="primary"
+            role="button"
+            aria-label="close button"
+            (click)="closeDialog()">
+     close
+    </button>
+  </header>
+  <section class="h-full overflow-auto px-6">
+    <ng-template cdkPortalOutlet></ng-template>
+  </section>
+</div>

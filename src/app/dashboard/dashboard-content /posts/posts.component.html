@@ -1,0 +1,9 @@
+<div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+  @for (post of posts(); track post.id) {
+    <app-post-card [title]="post.title"
+                   [description]="post.body"
+                   (click)="openDetails(post)">
+
+    </app-post-card>
+  }
+</div>

@@ -1,0 +1,46 @@
+<div class="relative overflow-x-auto">
+  <table class="w-full text-sm text-left rtl:text-right text-alpha-500">
+    <thead class="text-xs text-alpha-900 uppercase bg-alpha-50">
+    <tr>
+      <th scope="col" class="px-6 py-3">
+        Name
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Username
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Email
+      </th>
+      <th scope="col" class="px-6 py-3">
+        phone
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Actions
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (user of users(); track user.id) {
+        <tr class="border-b border-b-alpha-200">
+          <th scope="row" class="px-6 py-4 font-medium text-alpha-900 whitespace-nowrap">
+            {{ user.name }}
+          </th>
+          <td class="px-6 py-4 font-medium text-alpha-900 whitespace-nowrap">
+            {{ user.username }}
+          </td>
+          <td class="px-6 py-4 font-medium text-alpha-900 whitespace-nowrap">
+            {{ user.email }}
+          </td>
+          <td class="px-6 py-4 font-medium text-alpha-900 whitespace-nowrap">
+            {{ user.phone }}
+          </td>
+          <td class="px-6 py-4">
+            <button type="button" class="primary" (click)="viewPosts(user.id)">
+              Posts
+            </button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
