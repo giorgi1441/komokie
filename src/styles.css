@@ -7,4 +7,10 @@
   .primary {
     @apply font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none bg-primary-600 text-primary-50
   }
+
+  input[type='text'], input[type='password'], input[type='number'], input[type='email'], textarea {
+
+    @apply bg-alpha-50 border border-alpha-300 text-alpha-900 text-sm rounded-lg focus:ring-secondary-500 focus:border-secondary-500
+    block w-full p-2.5
+  }
 }
