@@ -7,8 +7,6 @@ export const usersReducer = createReducer(
   on(usersActions.getUsers, (state) => ({
     ...state,
     loading: true,
-    error: null,
-    users: []
   })),
   on(usersActions.getUsersSuccess, (state, { users }) => ({
     ...state,
@@ -20,6 +18,5 @@ export const usersReducer = createReducer(
     ...state,
     loading: false,
     error: error,
-    users: []
   }))
 )
