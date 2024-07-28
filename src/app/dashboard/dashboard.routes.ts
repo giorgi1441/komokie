@@ -12,11 +12,11 @@ export const DASHBOARD_ROUTES: Routes = [
     children: [
       {
         path: 'users',
-        loadComponent: () => import("./dashboard-content /users/users.component").then(c => c.UsersComponent)
+        loadComponent: () => import("./dashboard-content/users/users.component").then(c => c.UsersComponent)
       },
       {
         path: 'posts',
-        loadComponent: () => import("./dashboard-content /posts/posts.component").then(c => c.PostsComponent)
+        loadComponent: () => import("./dashboard-content/posts/posts.component").then(c => c.PostsComponent)
       }
     ]
   },
